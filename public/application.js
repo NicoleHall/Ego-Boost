@@ -45,8 +45,8 @@
 /***/ function(module, exports) {
 
 	"use strict";
-	
-	alert("Hello");
+
+	// alert("Hello");
 
 /***/ }
 /******/ ]);
