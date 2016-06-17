@@ -1,1 +1,24 @@
 @import 'complimentGenerator';
+@import url(https://fonts.googleapis.com/css?family=Quicksand);
+
+.center {
+  text-align: center;
+}
+.quicksand-font {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.friendly-background-color {
+  background-color: #BBFFFF;
+  padding: 20px;
+}
+
+.soothing-background-image {
+  position:absolute;
+  background-image:url("public/images/self-pride.jpg");
+  background-repeat:repeat-x;
+  width:100%;
+  height: 100px; /* Change to the height you need */
+  top:0px;
+  left:0px;
+}

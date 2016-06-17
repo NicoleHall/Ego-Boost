@@ -1,38 +1,19 @@
-* {
-  box-sizing: border-box;
+@import url(https://fonts.googleapis.com/css?family=Quicksand);.outter-container-friendship {
+  text-align: center;
+  color: red;
 }
 
-body {
-  font-family: "Gotham A", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  margin: 0;
-  overflow-x: hidden;
-  background-color: #dfdfe4;
+.center {
+  text-align: center;
 }
 
-main {
-  overflow: hidden;
+.quicksand-font {
+  font-family: 'Quicksand', sans-serif;
 }
 
-h4 {
-  position: absolute;
-  left: 7%;
-  top: 0;
-  font-weight: normal;
-  font-size: 34px;
-}
-
-img {
-  width: 100%;
-}
-
-.blur {
-  -webkit-filter: blur(3px);
-  filter: blur(3px);
-}
-
-.gridItem {
-  position: absolute;
+.friendly-background-color {
+  background-color: #BBFFFF;
+  padding: 20px;
 }
 
 /*# sourceMappingURL=main.css.map*/

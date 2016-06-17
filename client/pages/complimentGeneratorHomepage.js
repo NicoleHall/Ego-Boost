@@ -2,16 +2,19 @@ var $ = require('jquery');
 
 // legacy loading for bootstrap
 window.jQuery = window.$ = $;
-require('bootstrap');
+//  require('bootstrap');
 
 import _ from 'underscore';
-import Backbone from 'backbone';
+import Backbone from 'html!backbone';
 
 var app = {
   init: function(){
-    var complimentGenerator = Backbone.View.extend({})
-  };
-}
+    app.render;
+  },
+  render: function(){
+
+  }
+};
 
 
 module.exports = app;
