@@ -1,27 +1,25 @@
-import $ from 'jquery';
-import styles from 'styles/main.scss';
+var $ = require('jquery');
 
-import complimentGenerator from 'pages/complimentGeneratorHomepage';
+//  legacy loading for bootstrap for es5
+window.jQuery = window.$ = $;
+require('bootstrap');
+
+import styles from "styles/main.scss";
+
+import complimentGeneratorHomepage from "pages/complimentGeneratorHomepage";
 
 
 $(function(){
-  header.init();
-
   //  what page are we on?
   var url = window.location.pathname;
 
   //  this is the javascript router
-
   switch (url) {
-    case '/compliments':
-      complimentGeneratorHomepages.init();
+    case "/pages/complimentGenerator.html":
+
+      complimentGeneratorHomepage.init();
       break;
 
   }
 
-console.log('==========================');
-console.log('==========================');
-console.log('==I am looking for a job==');
-console.log('==========================');
-console.log('==========================');
 });
