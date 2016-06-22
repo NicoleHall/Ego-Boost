@@ -117,8 +117,8 @@ var app = {
 
   showACompliment: function(){
     $(document).on("keyup", function(){
-      var complimentArray = app.complimentArray
-      var randomCompliment = complimentArray[Math.floor(Math.random()*complimentArray.length)]
+      var complimentArray = app.complimentArray;
+      var randomCompliment = complimentArray[Math.floor(Math.random()*complimentArray.length)];
       $(".gimme_a_compliment").text(randomCompliment);
     });
   },
