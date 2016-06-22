@@ -81,7 +81,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"outter-container-friendship":"outter-container-friendship","center":"center","quicksand-font":"quicksand-font","friendly-background-color":"friendly-background-color"};
+	module.exports = {"outter-container-friendship":"outter-container-friendship","mission-statement":"mission-statement","rock-salt-font":"rock-salt-font","centered-text":"centered-text","center":"center","quicksand-font":"quicksand-font","friendly-background-color":"friendly-background-color"};
 
 /***/ },
 /* 2 */,
@@ -114,6 +114,7 @@
 	
 	  init: function init() {
 	    app.showACompliment();
+	    app.hideTheMissionStatementAfterKeypress();
 	  },
 	
 	  showACompliment: function showACompliment() {
@@ -121,6 +122,12 @@
 	      var complimentArray = app.complimentArray;
 	      var randomCompliment = complimentArray[Math.floor(Math.random() * complimentArray.length)];
 	      $(".gimme_a_compliment").text(randomCompliment);
+	    });
+	  },
+	
+	  hideTheMissionStatementAfterKeypress: function hideTheMissionStatementAfterKeypress() {
+	    $(document).on("keyup", function () {
+	      $(".mission-statement").hide();
 	    });
 	  }
 	};

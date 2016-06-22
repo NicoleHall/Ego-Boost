@@ -112,6 +112,7 @@ var app = {
 
   init: function(){
     app.showACompliment();
+    app.hideTheMissionStatementAfterKeypress();
   },
 
   showACompliment: function(){
@@ -119,6 +120,12 @@ var app = {
       var complimentArray = app.complimentArray
       var randomCompliment = complimentArray[Math.floor(Math.random()*complimentArray.length)]
       $(".gimme_a_compliment").text(randomCompliment);
+    });
+  },
+
+  hideTheMissionStatementAfterKeypress: function(){
+    $(document).on("keyup", function(){
+      $(".mission-statement").hide();
     });
   }
 };
