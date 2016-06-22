@@ -5,7 +5,8 @@ window.jQuery = window.$ = $;
 //  require('bootstrap');
 
 import _ from "underscore";
-import Backbone from "html!backbone";
+//import Backbone from "html!backbone";
+import Backbone from "backbone";
 
 var app = {
   complimentArray: [
