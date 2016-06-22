@@ -101,7 +101,7 @@ var app = {
     "You are way better at math than most people",
     "You are a genuinely bad-ass person",
     "You have good posture",
-    "With you all the love songs finally make sense",
+    "Now that I've met you, all the love songs finally make sense",
     "That'll do, pig. That'll do",
     "You smell like soap",
     "Never change",
@@ -115,11 +115,10 @@ var app = {
   },
 
   showACompliment: function(){
-    $(document).on("keydown", function(event){
-      var code = event.keyCode;
-      if (code === 81) {
-        $(".gimme_a_compliment").text(app.complimentArray[0]);
-      }
+    $(document).on("keyup", function(){
+      var complimentArray = app.complimentArray
+      var randomCompliment = complimentArray[Math.floor(Math.random()*complimentArray.length)]
+      $(".gimme_a_compliment").text(randomCompliment);
     });
   }
 };
