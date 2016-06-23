@@ -90,6 +90,16 @@ a.button:hover {
   text-decoration: none;
 }
 
+div.col-md-6.col-md-6.col-xs-12.balloon {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: url(http://www.thisisstar.com/images/100UI/balloon_girl.jpg) no-repeat top left;
+  background-attachment: fixed;
+  background-size: contain;
+  min-height: 100vh;
+  position: relative;
+}
+
 .balloon {
   margin: 0 !important;
   padding: 0 !important;

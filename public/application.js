@@ -81,7 +81,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"mission-statement":"mission-statement","rock-salt-font":"rock-salt-font","centered-text":"centered-text","center":"center","border-fixed":"border-fixed","content":"content","animated":"animated","fadeInRight":"fadeInRight","button":"button","balloon":"balloon","max-width":"max-width","slideInUp":"slideInUp"};
+	module.exports = {"mission-statement":"mission-statement","rock-salt-font":"rock-salt-font","centered-text":"centered-text","center":"center","border-fixed":"border-fixed","content":"content","animated":"animated","fadeInRight":"fadeInRight","button":"button","col-md-6":"col-md-6","col-xs-12":"col-xs-12","balloon":"balloon","max-width":"max-width","slideInUp":"slideInUp"};
 
 /***/ },
 /* 2 */,

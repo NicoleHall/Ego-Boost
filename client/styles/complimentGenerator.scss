@@ -64,7 +64,7 @@ h1.animated.fadeInRight {
   font-family: "Righteous";
   margin-top: 60px;
   margin-bottom: 40px;
-   
+
 }
 
 h2 {
@@ -98,6 +98,16 @@ a.button {
 a.button:hover {
   top: 2px;
   text-decoration: none;
+}
+
+div.col-md-6.col-md-6.col-xs-12.balloon {
+  margin: 0!important;
+    padding: 0!important;
+    background: url(http://www.thisisstar.com/images/100UI/balloon_girl.jpg) no-repeat top left;
+    background-attachment: fixed;
+    background-size: contain;
+    min-height: 100vh;
+    position: relative;
 }
 
 .balloon {
