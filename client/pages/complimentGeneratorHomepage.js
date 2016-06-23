@@ -109,7 +109,8 @@ var app = {
     "If everyone was like you, war wouldn't exist",
     "Your sneezes are adorable",
     "You are a person of extreme good taste",
-    "You must have eaten a F5 key, because your body is refreshing"
+    "You must have eaten a F5 key, because your body is refreshing",
+    "Sucking at something is the first step to becoming sorta good at something"
   ],
 
   init: function(){
