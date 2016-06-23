@@ -110,7 +110,8 @@ var app = {
     "Your sneezes are adorable",
     "You are a person of extreme good taste",
     "You must have eaten a F5 key, because your body is refreshing",
-    "Sucking at something is the first step to becoming sorta good at something"
+    "Sucking at something is the first step to becoming sorta good at something",
+    "You don't look like someone who studies Computer Science."
   ],
 
   init: function(){
