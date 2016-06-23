@@ -1,9 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Rock+Salt);@import url(https://fonts.googleapis.com/css?family=Righteous);@import url(https://fonts.googleapis.com/css?family=Raleway:300,700);.outter-container-friendship {
-  text-align: center;
-  color: blue;
-}
-
-.mission-statement {
+@import url(https://fonts.googleapis.com/css?family=Rock+Salt);@import url(https://fonts.googleapis.com/css?family=Righteous);@import url(https://fonts.googleapis.com/css?family=Raleway:300,700);.mission-statement {
   text-align: center;
 }
 
@@ -13,6 +8,10 @@
 }
 
 .centered-text {
+  text-align: center;
+}
+
+.center {
   text-align: center;
 }
 
@@ -47,7 +46,7 @@ section {
   position: relative;
 }
 
-h1 {
+h1.animated.fadeInRight {
   padding-top: 10px;
   font-size: 120px;
   color: #F9D47B;
@@ -56,7 +55,6 @@ h1 {
   font-family: "Righteous";
   margin-top: 60px;
   margin-bottom: 40px;
-  margin-left: -95px;
 }
 
 h2 {
@@ -107,6 +105,10 @@ a.button:hover {
   margin: 0 auto;
 }
 
+h2.animated.slideInUp {
+  color: antiquewhite;
+}
+
 @media (max-width: 767px) {
   .balloon {
     background-size: cover;
@@ -121,15 +123,6 @@ a.button:hover {
   .max-width {
     margin: 50px auto;
   }
-}
-
-.center {
-  text-align: center;
-}
-
-.friendly-background-color {
-  background-color: #BBFFFF;
-  padding: 20px;
 }
 
 /*# sourceMappingURL=main.css.map*/
