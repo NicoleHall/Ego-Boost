@@ -56,6 +56,10 @@
 	
 	var _pagesComplimentGeneratorHomepage2 = _interopRequireDefault(_pagesComplimentGeneratorHomepage);
 	
+	var _pagesDonate = __webpack_require__(22);
+	
+	var _pagesDonate2 = _interopRequireDefault(_pagesDonate);
+	
 	var $ = __webpack_require__(8);
 	
 	//  legacy loading for bootstrap for es5
@@ -69,10 +73,11 @@
 	  //  this is the javascript router
 	  switch (url) {
 	    case "/pages/complimentGenerator.html":
-	
 	      _pagesComplimentGeneratorHomepage2['default'].init();
 	      break;
-	
+	    case "/pages/donate.html":
+	      _pagesDonate2['default'].init();
+	      break;
 	  }
 	});
 
@@ -15911,6 +15916,20 @@
 	
 	}(jQuery);
 
+
+/***/ },
+/* 22 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	var app = {
+	  init: function init() {
+	    alert("donate!");
+	  }
+	};
+	
+	module.exports = app;
 
 /***/ }
 /******/ ]);
