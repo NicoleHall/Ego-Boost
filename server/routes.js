@@ -37,6 +37,22 @@ router.post('/compliment', function(req, res){
   fs.writeFile(databasePath, completeFile);
 });
 
+router.post('/donate', function(req, res){
+  // this is my test secret key
+  var stripe = require("stripe")("sk_test_WcCymWoxSsPuhBOyod4T2l1m");
+  var stripeToken = request.body.stripeToken;
+
+  var charge = stripe.charges.create({
+    amount: 1000,
+    currency: "usd",
+    source: stripeToken,
+    description: "Example Charge"
+  }, function(err, charge) {
+    if (err && err.type === 'StripeCardError') {
+    }
+  })
+});
+
 //  everything route
 router.get('/*', function indexRouteHandler (req, res) {
   res.render('view', {
