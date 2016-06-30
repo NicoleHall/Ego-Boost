@@ -23,18 +23,22 @@ router.get('/compliment', function(req, res){
 });
 
 router.post('/compliment', function(req, res){
-  var compliments = req.body;
-  console.log(compliments);
-  var completeFile;
+  var compliments = req.body.postData;
   fs.readFile(databasePath, function(err, data){
     if (err) { console.log(err); }
-    completeFile = JSON.parse(data.toString('utf8'));
+    var completeFile = JSON.parse(data.toString('utf8'));
+    completeFile.complimentArray.push(compliments);
+    // want to get the body of the post into the complimentArray
+    // stingify the compliments file
+    // save it into the completeFile
+    var dbString = JSON.stringify(completeFile);
+    fs.writeFile(databasePath, dbString);
+    res.writeHead(200, {'Content-Type': 'text/json'});
+    var responseData = {message: "Thank you for submitting a compliment"};
+    res.write(JSON.stringify(responseData));
+    res.end();
   });
-  completeFile["complimentArray"].push(data);
-  // want to get the body of the post into the complimentArray
-  // stingify the compliments file
-  // save it into the completeFile
-  fs.writeFile(databasePath, completeFile);
+
 });
 
 router.post('/donate', function(req, res){

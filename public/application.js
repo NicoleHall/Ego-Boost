@@ -134,9 +134,11 @@
 	        $.ajax({
 	          url: "/compliment",
 	          method: "POST",
-	          data: compliment,
-	          success: function success() {
-	            $("#validation").html("Thank you for submitting a compliment");
+	          data: { postData: compliment },
+	          success: function success(res) {
+	            var message = res.message;
+	            $("#validation").html(message);
+	            $("input[name='compliment']").val("");
 	          }
 	        });
 	      }
