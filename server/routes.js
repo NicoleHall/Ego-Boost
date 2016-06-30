@@ -40,8 +40,9 @@ router.post('/compliment', function(req, res){
 router.post('/donate', function(req, res){
   // this is my test secret key
   var stripe = require("stripe")("sk_test_WcCymWoxSsPuhBOyod4T2l1m");
-  var stripeToken = request.body.stripeToken;
 
+  var stripeToken = request.body.stripeToken;
+   console.log(stripeToken);
   var charge = stripe.charges.create({
     amount: 1000,
     currency: "usd",

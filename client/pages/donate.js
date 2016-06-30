@@ -14,7 +14,7 @@ var app = {
       // Disable the submit button to prevent repeated clicks:
       $form.find('.submit').prop('disabled', true);
       // Request a token from Stripe:
-      Stripe.card.createToken($form, stripeResponseHandler);
+      Stripe.card.createToken($form, app.stripeResponseHandler);
       // Prevent the form from being submitted:
       return false;
     });
@@ -23,7 +23,7 @@ var app = {
     var $form = $('#payment-form');
 
     if (response.error) { // Problem!
-
+      
       // Show the errors on the form:
       $form.find('.payment-errors').text(response.error.message);
       $form.find('.submit').prop('disabled', false); // Re-enable submission

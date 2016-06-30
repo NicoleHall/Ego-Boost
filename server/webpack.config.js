@@ -33,6 +33,9 @@ var commonConfiguration = {
   entry: {
     application: "App"
   },
+  node: {
+    "child_process": "empty"
+  },
   output: {
     // The output directory as absolute path
     path: assetsPath,
@@ -45,17 +48,24 @@ var commonConfiguration = {
 
   module: {
     loaders: [
-      { 
+      {
         test: /\.js$|\.jsx$/,
         loader: "babel-loader?stage=0", // http://babeljs.io/docs/usage/experimental/
         include: path.join(__dirname, "..",  "client")
       },
-      { 
+      {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract('style', 'css?module&localIdentName=[local]' +
           '&sourceMap!sass?sourceMap&outputStyle=expanded' +
           '&includePaths[]=' + (path.resolve(__dirname, '../node_modules'))),
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
       }
+
+
+
       // { test: /\.png$/, loader: "url-loader" },
       // { test: /\.jpg$/, loader: "file-loader" },
       // { test: /\.html$/, loader: "html-loader" },
@@ -67,7 +77,7 @@ var commonConfiguration = {
       "client", "node_modules"
     ]
   },
-            
+
 };
 
 console.log('node environment: ' + process.env.NODE_ENV);

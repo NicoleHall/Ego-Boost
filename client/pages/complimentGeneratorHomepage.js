@@ -37,7 +37,6 @@ var app = {
 
   showACompliment: function(){
     $("#ego-boost-button").on("click", function(){
-      console.log("hello world");
       $.ajax({
         url: "/compliment",
         method: "GET",
