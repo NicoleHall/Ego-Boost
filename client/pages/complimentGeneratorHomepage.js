@@ -30,6 +30,7 @@ var app = {
           success: function(res){
             var message = res.message;
             $("#validation").html(message);
+            $("input[name='compliment']").val("");
           }
         })
       }
