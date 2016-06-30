@@ -14,6 +14,7 @@ var app = {
     app.showACompliment();
     app.hideTheMissionStatementAfterKeypress();
     app.userCanSubmitACompliment();
+    app.deleteACompliment();
   },
 
   userCanSubmitACompliment: function(){
@@ -39,12 +40,13 @@ var app = {
 
   showACompliment: function(){
     $("#ego-boost-button").on("click", function(){
-      console.log("hello world");
       $.ajax({
         url: "/compliment",
         method: "GET",
-        success: function(randomCompliment){
-          $(".gimme_a_compliment").text(randomCompliment);
+        success: function(returnObject){
+
+          $(".gimme_a_compliment").text(returnObject.message);
+          $(".index").text(returnObject.index);
         }
       });
     });
@@ -54,6 +56,21 @@ var app = {
     $("#ego-boost-button").on("click", function(){
       $(".mission-statement").hide();
     });
+  },
+
+  deleteACompliment: function(){
+    $(".delete").on("click", function(){
+      $.ajax({
+        url: "/compliment",
+        method: "DELETE",
+        data: {index: $(".index").text()},
+        success: function(res){
+          $(".delete-message").text(res.message);
+          $(".gimme_a_compliment").text("");
+          $(".delete-message").text("");
+        }
+      })
+    })
   }
 };
 module.exports = app;
