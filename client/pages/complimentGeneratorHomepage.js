@@ -26,9 +26,10 @@ var app = {
         $.ajax({
           url: "/compliment",
           method: "POST",
-          data: compliment,
-          success: function(){
-            $("#validation").html("Thank you for submitting a compliment");
+          data: {postData: compliment},
+          success: function(res){
+            var message = res.message;
+            $("#validation").html(message);
           }
         })
       }
