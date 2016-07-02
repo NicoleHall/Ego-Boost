@@ -18,11 +18,11 @@ var app = {
   },
 
   userCanSubmitACompliment: function(){
-    $("#add-compliment").on('click', function(event){
+    $("#add-compliment").on("click", function(event){
       event.preventDefault();
       var compliment = $("input[name='compliment']").val();
       if (compliment.length <= 0) {
-        $("#validation").html("Invalid Entry")
+        $("#validation").html("Invalid Entry");
       } else {
         $.ajax({
           url: "/compliment",
@@ -31,11 +31,15 @@ var app = {
           success: function(res){
             var message = res.message;
             $("#validation").html(message);
+            $("#validation").show();
             $("input[name='compliment']").val("");
           }
-        })
+        });
+        $("#ego-boost-button").on("click", function(){
+          $("#validation").hide();
+        });
       }
-    })
+    });
   },
 
   showACompliment: function(){
@@ -65,12 +69,16 @@ var app = {
         method: "DELETE",
         data: {index: $(".index").text()},
         success: function(res){
-          $(".delete-message").text(res.message);
-          $(".gimme_a_compliment").text("");
-          $(".delete-message").text("");
+          var message = res.message;
+          $(".delete-message").text(message);
+          $(".delete-message").show();
         }
-      })
-    })
+      });
+    });
+    $("#ego-boost-button").on("click", function(){
+      $(".delete-message").hide();
+    });
   }
+
 };
 module.exports = app;

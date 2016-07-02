@@ -121,7 +121,7 @@
 	  },
 	
 	  userCanSubmitACompliment: function userCanSubmitACompliment() {
-	    $("#add-compliment").on('click', function (event) {
+	    $("#add-compliment").on("click", function (event) {
 	      event.preventDefault();
 	      var compliment = $("input[name='compliment']").val();
 	      if (compliment.length <= 0) {
@@ -134,8 +134,12 @@
 	          success: function success(res) {
 	            var message = res.message;
 	            $("#validation").html(message);
+	            $("#validation").show();
 	            $("input[name='compliment']").val("");
 	          }
+	        });
+	        $("#ego-boost-button").on("click", function () {
+	          $("#validation").hide();
 	        });
 	      }
 	    });
@@ -168,13 +172,17 @@
 	        method: "DELETE",
 	        data: { index: $(".index").text() },
 	        success: function success(res) {
-	          $(".delete-message").text(res.message);
-	          $(".gimme_a_compliment").text("");
-	          $(".delete-message").text("");
+	          var message = res.message;
+	          $(".delete-message").text(message);
+	          $(".delete-message").show();
 	        }
 	      });
 	    });
+	    $("#ego-boost-button").on("click", function () {
+	      $(".delete-message").hide();
+	    });
 	  }
+	
 	};
 	module.exports = app;
 
