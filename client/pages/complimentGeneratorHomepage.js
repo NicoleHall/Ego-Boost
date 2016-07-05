@@ -42,14 +42,20 @@ var app = {
         var sentiment = require("sentiment");
         var r1 = sentiment(compliment);
         if (r1.score < 0 ) {
-          $.ajax({
-            url: "/swearjar",
-            method: "GET",
-            success: function(compliment){
-              $(".hurt-feelings").text(compliment);
-            }
-          });
+          app.hurtFeelings();
         }
+      }
+    });
+  },
+
+  hurtFeelings: function(){
+    var compliment = $("input[name='compliment']").val();
+    $.ajax({
+      url: "/swearJar",
+      method: "GET",
+      success: function(res){
+        var message = res.message
+        $(".hurt-feelings").text(message);
       }
     });
   },

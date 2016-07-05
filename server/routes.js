@@ -11,7 +11,6 @@ var databasePath = __dirname + '/database.json';
 
 router.get('/compliment', function(req, res){
   fs.readFile(databasePath, function(err, data){
-
     if (err) { console.log(err); }
     data = JSON.parse(data.toString('utf8'));
     var complimentArray = data["complimentArray"];
@@ -55,6 +54,22 @@ router.delete('/compliment', function(req, res){
     fs.writeFile(databasePath, dbString);
     res.writeHead(200, {'Content-Type': 'text/json'});
     var responseData = {message: "You have just deleted a dirty compliment"};
+    res.write(JSON.stringify(responseData));
+    res.end();
+  });
+
+});
+
+router.get('/swearJar', function(req, res){
+  // var indexValue = req.body.index;
+  fs.readFile(databasePath, function(err, data){
+    if (err) { console.log(err); }
+    var completeFile = JSON.parse(data.toString('utf8'));
+    var youHurtMyFeelings = completeFile.complimentArray.pop();
+    var dbString = JSON.stringify(completeFile);
+    fs.writeFile(databasePath, dbString);
+    res.writeHead(200, {'Content-Type': 'text/json'});
+    var responseData = {message: youHurtMyFeelings};
     res.write(JSON.stringify(responseData));
     res.end();
   });
