@@ -7,6 +7,7 @@ window.jQuery = window.$ = $;
 import _ from "underscore";
 //import Backbone from "html!backbone";
 import Backbone from "backbone";
+import sentiment from "sentiment";
 
 var app = {
 
@@ -38,6 +39,17 @@ var app = {
         $("#ego-boost-button").on("click", function(){
           $("#validation").hide();
         });
+        var sentiment = require("sentiment");
+        var r1 = sentiment(compliment);
+        if (r1.score < 0 ) {
+          $.ajax({
+            url: "/swearjar",
+            method: "GET",
+            success: function(compliment){
+              $(".hurt-feelings").text(compliment);
+            }
+          });
+        }
       }
     });
   },
