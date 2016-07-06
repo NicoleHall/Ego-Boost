@@ -145,11 +145,11 @@
 	        $("#ego-boost-button").on("click", function () {
 	          $("#validation").hide();
 	        });
-	        var sentiment = __webpack_require__(9);
-	        var r1 = sentiment(compliment);
-	        if (r1.score < 0) {
-	          app.hurtFeelings();
-	        }
+	        // var sentiment = require("sentiment");
+	        // var r1 = sentiment(compliment);
+	        // if (r1.score < 0 ) {
+	        //   app.hurtFeelings();
+	        // }
 	      }
 	    });
 	  },

@@ -11,16 +11,17 @@ var databasePath = __dirname + '/database.json';
 
 router.get('/compliment', function(req, res){
   fs.readFile(databasePath, function(err, data){
-    if (err) { console.log(err); }
-    data = JSON.parse(data.toString('utf8'));
-    var complimentArray = data["complimentArray"];
-    var computedIndex = Math.floor(Math.random()*complimentArray.length);
-    var randomCompliment = complimentArray[computedIndex];
-    res.writeHead(200, {'Content-Type': 'text/json'});
-    res.write(JSON.stringify({
-      message: randomCompliment,
-      index: computedIndex
-    }));
+     if (err) { console.log(err); }
+
+      data = JSON.parse(data.toString('utf8'));
+      var complimentArray = data["complimentArray"];
+      var computedIndex = Math.floor(Math.random()*complimentArray.length);
+      var randomCompliment = complimentArray[computedIndex];
+      res.writeHead(200, {'Content-Type': 'text/json'});
+      res.write(JSON.stringify({
+        message: randomCompliment,
+        index: computedIndex
+      }));
     res.end();
   });
 });
@@ -59,22 +60,22 @@ router.delete('/compliment', function(req, res){
   });
 
 });
-
-router.get('/swearJar', function(req, res){
-  // var indexValue = req.body.index;
-  fs.readFile(databasePath, function(err, data){
-    if (err) { console.log(err); }
-    var completeFile = JSON.parse(data.toString('utf8'));
-    var youHurtMyFeelings = completeFile.complimentArray.pop();
-    var dbString = JSON.stringify(completeFile);
-    fs.writeFile(databasePath, dbString);
-    res.writeHead(200, {'Content-Type': 'text/json'});
-    var responseData = {message: youHurtMyFeelings};
-    res.write(JSON.stringify(responseData));
-    res.end();
-  });
-
-});
+//
+// router.get('/swearJar', function(req, res){
+//   // var indexValue = req.body.index;
+//   fs.readFile(databasePath, function(err, data){
+//     if (err) { console.log(err); }
+//     var completeFile = JSON.parse(data.toString('utf8'));
+//     var youHurtMyFeelings = completeFile.complimentArray.pop();
+//     var dbString = JSON.stringify(completeFile);
+//     fs.writeFile(databasePath, dbString);
+//     res.writeHead(200, {'Content-Type': 'text/json'});
+//     var responseData = {message: youHurtMyFeelings};
+//     res.write(JSON.stringify(responseData));
+//     res.end();
+//   });
+//
+// });
 
 //  everything route
 router.get('/*', function indexRouteHandler (req, res) {
