@@ -86,7 +86,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"mission-statement":"mission-statement","rock-salt-font":"rock-salt-font","centered-text":"centered-text","center":"center","border-fixed":"border-fixed","content":"content","animated":"animated","fadeInRight":"fadeInRight","righteous-font":"righteous-font","button":"button","ego-boost-button":"ego-boost-button","col-md-6":"col-md-6","col-xs-12":"col-xs-12","balloon":"balloon","row-of-ballon-girls":"row-of-ballon-girls","max-width":"max-width","matches-landing-page":"matches-landing-page","slideInUp":"slideInUp"};
+	module.exports = {"mission-statement":"mission-statement","rock-salt-font":"rock-salt-font","centered-text":"centered-text","center":"center","border-fixed":"border-fixed","content":"content","animated":"animated","fadeInRight":"fadeInRight","righteous-font":"righteous-font","button":"button","ego-boost-button":"ego-boost-button","pull-right":"pull-right","delete":"delete","col-md-6":"col-md-6","col-xs-12":"col-xs-12","balloon":"balloon","row-of-ballon-girls":"row-of-ballon-girls","max-width":"max-width","matches-landing-page":"matches-landing-page","slideInUp":"slideInUp"};
 
 /***/ },
 /* 2 */,
