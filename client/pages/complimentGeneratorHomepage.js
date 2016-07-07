@@ -84,6 +84,7 @@ var app = {
           $(".delete-message").show();
         }
       });
+      $("h2.gimme_a_compliment").text("");
     });
     $("#ego-boost-button").on("click", function(){
       $(".delete-message").hide();
