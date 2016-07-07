@@ -12,6 +12,7 @@ import _ from "underscore";
 var app = {
   init: function(){
     app.showNonComplimentToUser();
+    app.sadFaceDesign();
   },
 
   getQueryParams: function(qs){
@@ -19,12 +20,12 @@ var app = {
     qs = qs.search.split("+").join(" ");
 
     var params = {},
-        tokens,
-        re = /[?&]?([^=]+)=([^&]*)/g;
+    tokens,
+    re = /[?&]?([^=]+)=([^&]*)/g;
 
     while (tokens = re.exec(qs)) {
       params[decodeURIComponent(tokens[1])]
-            = decodeURIComponent(tokens[2]);
+      = decodeURIComponent(tokens[2]);
     }
     return params;
   },
@@ -32,6 +33,19 @@ var app = {
   showNonComplimentToUser: function(){
     var nonCompliment = app.getQueryParams(document.location);
     $(".zomg").text(nonCompliment.compliment);
+  },
+
+  sadFaceDesign: function(){
+    var world = document.getElementById("monster-world");
+    var monster = document.getElementById("little-monster");
+    monster.addEventListener('click', function() {
+      if (world.className.match('omg-clicked')) {
+        world.className = '';
+        document.body.style.backgroundColor = "#6C6386";
+      } else {
+        world.className += "omg-clicked";
+      }
+    });
   }
 };
 

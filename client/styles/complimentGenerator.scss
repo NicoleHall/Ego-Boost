@@ -48,6 +48,19 @@ section {
   pointer-events:none;
 }
 
+.pink-border-fixed {
+  position: fixed;
+  top: 20px;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  border: 5px solid #EE1289;
+
+  z-index: 90;
+  mix-blend-mode: multiply;
+  pointer-events:none;
+}
+
 .content {
   z-index: 100;
   max-width: 100%;
@@ -186,6 +199,438 @@ h2.matches-landing-page {
 h2.animated.slideInUp {
   color: antiquewhite;
 }
+
+//  sad face thing
+.example {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background: -webkit-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white, black);
+}
+
+$backgroundColor: #6C6386;
+$indicatorColor: #42395b;
+$white: #FFFFFF;
+$black: #000000;
+
+$angry-dark-elements:#6D2C2C;
+
+html,body {height:100%;;}
+
+#monster-world {
+    height:100%;
+    -webkit-transition: background .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out;
+    -ms-transition: background .5s ease-in-out;
+    -o-transition: background .5s ease-in-out;
+    transition: background .5s ease-in-out;
+
+}
+
+span {
+    display:block;
+}
+
+div#stage {
+    width: 175px;
+    height: 175px;
+    margin:0 auto;
+    text-align:center;
+    position:relative;
+    top:10em;
+}
+
+#little-monster {
+    -webkit-animation: levitation 2s ease-in-out infinite;
+    animation: levitation 2s ease-in-out infinite;
+
+    &:hover {
+        -webkit-transform:scale(10);
+                transform:scale(10);
+    }
+}
+
+.monster-body {
+    background:#68A3A7;
+    width:175px;
+    height:175px;
+    border-radius:50%;
+    position:relative;
+    margin:0 auto;
+    top:0em;
+    z-index:4;
+}
+
+.eyes {
+    width:65px;
+    height: 30px;
+    background:black;
+    border-bottom-left-radius: 110px;
+    border-bottom-right-radius: 110px;
+    position:absolute;
+    z-index:5;
+    border-bottom:4px solid #447577;
+    -webkit-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+
+    &:before {
+        content:"";
+        background:#578e91;
+        display:block;
+        width:65px;
+        height:5px;
+        border-radius: 55px 55px 0 0;
+        position:relative;
+    }
+
+    &:after {
+        content:"";
+        display:block;
+        background:$white;
+        width:5px;
+        height:5px;
+        border-radius:50%;
+        position:absolute;
+    }
+
+    &.eye-left {
+        bottom:2em;
+        left:1em;
+        -webkit-transform: rotateZ(-15deg);
+                transform: rotateZ(-15deg);
+
+        &:before {
+            top:-5px;
+            left:-1px;
+        }
+
+        &:after {
+            bottom:19px;
+            right:10px;
+        }
+    }
+
+    &.eye-right {
+        bottom:2em;
+        right:1em;
+        -webkit-transform: rotateZ(15deg);
+                transform: rotateZ(15deg);
+
+        &:before {
+            top:-5px;
+            left:1px;
+        }
+
+        &:after {
+            top:7px;
+            left:10px;
+        }
+    }
+}
+
+.mouth {
+    width:15px;
+    height:2px;
+    background:#447577;
+    bottom:20px;
+    left:0;
+    right:0;
+    margin:0 auto;
+    position:absolute;
+    z-index:12;
+    -webkit-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+}
+
+#little-monster:hover {
+
+    .mouth {
+        height:10px;
+        border-radius:0 0 50% 50%;
+    }
+
+    .eyes {
+        border-bottom-width: 7px;
+    }
+
+    .circles {
+        -webkit-transform:scale(10);
+                transform:scale(10);
+        border-width: 2px;
+    }
+}
+
+.spins {
+    width: 25px;
+    position: relative;
+    z-index: 2;
+    top: 80px;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+
+    span {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-color: transparent transparent #447577 transparent;
+        position:absolute;
+    }
+
+    .dark {
+        border-width: 0 0px 25px 12.5px;
+        border-color: transparent transparent #447577 transparent;
+    }
+
+    .light {
+        border-width: 0 12.5px 25px 0px;
+        border-color: transparent transparent #5d9396 transparent;
+        right:1px;
+    }
+
+    &.left {
+        -webkit-transform: rotateZ(85deg);
+                transform: rotateZ(85deg);
+        right: -185px;
+    }
+
+    &.right {
+        -webkit-transform: rotateZ(-85deg);
+                transform: rotateZ(-85deg);
+        left: -35px;
+    }
+
+    &.topleft {
+        -webkit-transform: rotateZ(-45deg) scale(0);
+                transform: rotateZ(-45deg) scale(0);
+        left: -5px;
+        top: 10px;
+    }
+
+    &.topright {
+        -webkit-transform: rotateZ(45deg) scale(0);
+                transform: rotateZ(45deg) scale(0);
+        right: -155px;
+        top: 10px;
+    }
+
+    &.bottomright {
+        -webkit-transform: rotateZ(125deg) scale(0);
+                transform: rotateZ(125deg) scale(0);
+        right: -167px;
+        top: 150px;
+    }
+
+    &.bottomleft {
+        -webkit-transform: rotateZ(-125deg) scale(0);
+                transform: rotateZ(-125deg) scale(0);
+        left: -17px;
+        top: 150px;
+    }
+
+    &.top {
+        -webkit-transform: rotateZ(0deg) scale(0);
+                transform: rotateZ(0deg) scale(0);
+        left: 72px;
+        top: -23px;
+    }
+
+    &.bottom {
+        -webkit-transform: rotateZ(180deg) scale(0);
+                transform: rotateZ(180deg) scale(0);
+        left: 72px;
+        top: 197px;
+    }
+}
+
+#monster-world.omg-clicked {
+    background:#211111;
+
+    /*! Eyes when little monster is angry */
+    .monster-body {
+        background:#A54444;
+    }
+
+    /*! Eyes when little monster is angry */
+    .eyes {
+        border-color:$angry-dark-elements;
+
+        &:before {
+            background:$angry-dark-elements;
+        }
+
+        &:after {
+            background:#DA4444;
+        }
+    }
+
+    .eye-left {
+        -webkit-transform: rotateZ(45deg);
+                transform: rotateZ(45deg);
+    }
+
+    .eye-right {
+        -webkit-transform: rotateZ(-45deg);
+                transform: rotateZ(-45deg);
+    }
+
+    /*! Mouth when little monster is angry */
+    .mouth {
+        background:$angry-dark-elements;
+    }
+
+
+    /*! Spins when little monster is angry */
+    .spins {
+        .dark {border-color: transparent transparent #B35353 transparent;}
+        .light {border-color: transparent transparent $angry-dark-elements transparent;}
+    }
+
+    .not-really-kind.topleft {-webkit-transform: rotateZ(-45deg) scale(1);transform: rotateZ(-45deg) scale(1);}
+    .not-really-kind.top {-webkit-transform: rotateZ(0deg) scale(1);transform: rotateZ(0deg) scale(1);}
+    .not-really-kind.bottom {-webkit-transform: rotateZ(180deg) scale(1);transform: rotateZ(180deg) scale(1);}
+    .not-really-kind.bottomleft {-webkit-transform: rotateZ(-125deg) scale(1);transform: rotateZ(-125deg) scale(1);}
+    .not-really-kind.topright {-webkit-transform: rotateZ(45deg) scale(1);transform: rotateZ(45deg) scale(1);}
+    .not-really-kind.bottomright {-webkit-transform: rotateZ(125deg) scale(1);transform: rotateZ(125deg) scale(1);}
+
+    .hover-him {
+        opacity:0;
+    }
+
+    .click-him {
+        opacity:0;
+    }
+
+    .free-him {
+        opacity:1;
+        color:#DA4444;
+    }
+
+    #stage:hover {
+        .click-him {opacity:0;}
+        .free-him {opacity:1;}
+    }
+}
+
+
+.shadow {
+    background:rgba(0,0,0,.2);
+    width:75px;
+    height:75px;
+    border-radius:50%;
+    margin:0 auto;
+    left:-1px;
+    position:relative;
+    -webkit-animation: shadow 2s ease-in-out infinite;
+            animation: shadow 2s ease-in-out infinite;
+}
+
+
+/*! indicator */
+p {
+    color:$indicatorColor;
+    letter-spacing: 2px;
+    font-family:'Lato',arial,sans-serif;
+    display:block;
+    padding-bottom:4em;
+    position:absolute;
+    top:20em;
+    width:275px;
+    left:-47px;
+    -webkit-transition:all .35s ease-in-out;
+    transition:all .35s ease-in-out;
+
+    text: {
+        align:center;
+        -webkit-transform:uppercase;
+                transform:uppercase;
+    }
+    font: {
+        size:14px;
+        weight:bold;
+    }
+
+    &.hover-him {
+        opacity:1;
+        line-height:12px;
+    }
+
+    &.click-him {
+        opacity:0;
+    }
+
+    &.free-him {
+        opacity:0;
+    }
+}
+
+#stage:hover {
+
+    .hover-him {
+        opacity:0;
+    }
+
+    .click-him {
+        opacity:1;
+    }
+
+    .free-him {
+        opacity:0;
+    }
+}
+
+/* Shadow */
+@-webkit-keyframes shadow {
+    0%, 100% {
+        -webkit-transform:scale(1) rotateX(105deg);
+        transform:scale(1) rotateX(105deg);
+    }
+    50% {
+        -webkit-transform:scale(0.7) rotateX(105deg);
+        transform:scale(0.7) rotateX(105deg);
+    }
+}
+@keyframes shadow {
+    0%, 100% {
+        -webkit-transform:scale(1) rotateX(105deg);
+        transform:scale(1) rotateX(105deg);
+    }
+    50% {
+        -webkit-transform:scale(0.7) rotateX(105deg);
+        transform:scale(0.7) rotateX(105deg);
+    }
+}
+
+@-webkit-keyframes levitation {
+    0%, 100% {
+        -webkit-transform:translateY(0);
+        transform:translateY(0);
+    }
+    50% {
+        -webkit-transform:translateY(-25px);
+        transform:translateY(-25px);
+    }
+}
+
+@keyframes levitation {
+    0%, 100% {
+        -webkit-transform:translateY(0);
+        transform:translateY(0);
+    }
+    50% {
+        -webkit-transform:translateY(-25px);
+        transform:translateY(-25px);
+    }
+}
+// end sad face thing
+
 
 @media (max-width: 767px) {
   .balloon {

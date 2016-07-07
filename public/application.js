@@ -86,7 +86,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"mission-statement":"mission-statement","rock-salt-font":"rock-salt-font","centered-text":"centered-text","center":"center","border-fixed":"border-fixed","content":"content","animated":"animated","fadeInRight":"fadeInRight","righteous-font":"righteous-font","button":"button","ego-boost-button":"ego-boost-button","pull-right":"pull-right","delete":"delete","col-md-6":"col-md-6","col-xs-12":"col-xs-12","balloon":"balloon","row-of-ballon-girls":"row-of-ballon-girls","max-width":"max-width","matches-landing-page":"matches-landing-page","slideInUp":"slideInUp"};
+	module.exports = {"mission-statement":"mission-statement","rock-salt-font":"rock-salt-font","centered-text":"centered-text","center":"center","border-fixed":"border-fixed","pink-border-fixed":"pink-border-fixed","content":"content","animated":"animated","fadeInRight":"fadeInRight","righteous-font":"righteous-font","button":"button","ego-boost-button":"ego-boost-button","pull-right":"pull-right","delete":"delete","col-md-6":"col-md-6","col-xs-12":"col-xs-12","balloon":"balloon","row-of-ballon-girls":"row-of-ballon-girls","max-width":"max-width","matches-landing-page":"matches-landing-page","slideInUp":"slideInUp","example":"example","monster-world":"monster-world","stage":"stage","little-monster":"little-monster","levitation":"levitation","monster-body":"monster-body","eyes":"eyes","eye-left":"eye-left","eye-right":"eye-right","mouth":"mouth","circles":"circles","spins":"spins","dark":"dark","light":"light","left":"left","right":"right","topleft":"topleft","topright":"topright","bottomright":"bottomright","bottomleft":"bottomleft","top":"top","bottom":"bottom","omg-clicked":"omg-clicked","not-really-kind":"not-really-kind","hover-him":"hover-him","click-him":"click-him","free-him":"free-him","shadow":"shadow"};
 
 /***/ },
 /* 2 */,
@@ -17432,6 +17432,7 @@
 	window.jQuery = window.$ = $;var app = {
 	  init: function init() {
 	    app.showNonComplimentToUser();
+	    app.sadFaceDesign();
 	  },
 	
 	  getQueryParams: function getQueryParams(qs) {
@@ -17451,6 +17452,19 @@
 	  showNonComplimentToUser: function showNonComplimentToUser() {
 	    var nonCompliment = app.getQueryParams(document.location);
 	    $(".zomg").text(nonCompliment.compliment);
+	  },
+	
+	  sadFaceDesign: function sadFaceDesign() {
+	    var world = document.getElementById("monster-world");
+	    var monster = document.getElementById("little-monster");
+	    monster.addEventListener('click', function () {
+	      if (world.className.match('omg-clicked')) {
+	        world.className = '';
+	        document.body.style.backgroundColor = "#6C6386";
+	      } else {
+	        world.className += "omg-clicked";
+	      }
+	    });
 	  }
 	};
 	
