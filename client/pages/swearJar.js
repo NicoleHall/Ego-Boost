@@ -13,6 +13,7 @@ var app = {
   init: function(){
     app.showNonComplimentToUser();
     app.sadFaceDesign();
+    app.backButton();
   },
 
   getQueryParams: function(qs){
@@ -38,13 +39,19 @@ var app = {
   sadFaceDesign: function(){
     var world = document.getElementById("monster-world");
     var monster = document.getElementById("little-monster");
-    monster.addEventListener('click', function() {
-      if (world.className.match('omg-clicked')) {
-        world.className = '';
+    monster.addEventListener("click", function() {
+      if (world.className.match("omg-clicked")) {
+        world.className = "";
         document.body.style.backgroundColor = "#6C6386";
       } else {
         world.className += "omg-clicked";
       }
+    });
+  },
+
+  backButton: function(){
+    $("button.angry-button").on("click", function(){
+      window.location = "complimentGenerator.html";
     });
   }
 };

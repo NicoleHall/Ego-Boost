@@ -69,6 +69,10 @@ h1.animated.fadeInRight {
   margin-bottom: 40px;
 }
 
+.supposed-to-be-friendly {
+  margin-top: 45px;
+}
+
 .righteous-font {
   font-family: "Righteous";
 }
@@ -102,6 +106,21 @@ a.button {
 }
 
 button.button {
+  border-radius: 0;
+  background: rgba(239, 255, 0, 0.45);
+  padding: 3% 6%;
+  margin: 10px 0;
+  color: #F27050;
+  font-family: "Raleway";
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 25px;
+  border: none;
+}
+
+button.angry-button {
+  width: 95px;
   border-radius: 0;
   background: rgba(239, 255, 0, 0.45);
   padding: 3% 6%;
