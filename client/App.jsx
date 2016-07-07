@@ -8,6 +8,7 @@ import styles from "styles/main.scss";
 
 import complimentGeneratorHomepage from "pages/complimentGeneratorHomepage";
 
+import swearJar from "pages/swearJar";
 
 $(function(){
   //  what page are we on?
@@ -16,10 +17,11 @@ $(function(){
   //  this is the javascript router
   switch (url) {
     case "/pages/complimentGenerator.html":
-
       complimentGeneratorHomepage.init();
       break;
-
+    case "/pages/swearJar.html":
+      swearJar.init();
+      break;
   }
 
 });

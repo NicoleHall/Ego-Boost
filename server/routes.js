@@ -60,24 +60,9 @@ router.delete('/compliment', function(req, res){
   });
 
 });
-//
-// router.get('/swearJar', function(req, res){
-//   // var indexValue = req.body.index;
-//   fs.readFile(databasePath, function(err, data){
-//     if (err) { console.log(err); }
-//     var completeFile = JSON.parse(data.toString('utf8'));
-//     var youHurtMyFeelings = completeFile.complimentArray.pop();
-//     var dbString = JSON.stringify(completeFile);
-//     fs.writeFile(databasePath, dbString);
-//     res.writeHead(200, {'Content-Type': 'text/json'});
-//     var responseData = {message: youHurtMyFeelings};
-//     res.write(JSON.stringify(responseData));
-//     res.end();
-//   });
-//
-// });
 
-//  everything route
+
+ // everything route
 router.get('/*', function indexRouteHandler (req, res) {
   res.render('view', {
   	title: "Website Example",

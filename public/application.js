@@ -56,6 +56,10 @@
 	
 	var _pagesComplimentGeneratorHomepage2 = _interopRequireDefault(_pagesComplimentGeneratorHomepage);
 	
+	var _pagesSwearJar = __webpack_require__(29);
+	
+	var _pagesSwearJar2 = _interopRequireDefault(_pagesSwearJar);
+	
 	var $ = __webpack_require__(8);
 	
 	//  legacy loading for bootstrap for es5
@@ -69,10 +73,11 @@
 	  //  this is the javascript router
 	  switch (url) {
 	    case "/pages/complimentGenerator.html":
-	
 	      _pagesComplimentGeneratorHomepage2['default'].init();
 	      break;
-	
+	    case "/pages/swearJar.html":
+	      _pagesSwearJar2['default'].init();
+	      break;
 	  }
 	});
 
@@ -128,8 +133,12 @@
 	    $("#add-compliment").on("click", function (event) {
 	      event.preventDefault();
 	      var compliment = $("input[name='compliment']").val();
+	      var sentiment = __webpack_require__(9);
+	      var r1 = sentiment(compliment);
 	      if (compliment.length <= 0) {
 	        $("#validation").html("Invalid Entry");
+	      } else if (r1.score < 0) {
+	        app.hurtFeelings(compliment);
 	      } else {
 	        $.ajax({
 	          url: "/compliment",
@@ -145,25 +154,13 @@
 	        $("#ego-boost-button").on("click", function () {
 	          $("#validation").hide();
 	        });
-	        // var sentiment = require("sentiment");
-	        // var r1 = sentiment(compliment);
-	        // if (r1.score < 0 ) {
-	        //   app.hurtFeelings();
-	        // }
 	      }
 	    });
 	  },
 	
-	  hurtFeelings: function hurtFeelings() {
-	    var compliment = $("input[name='compliment']").val();
-	    $.ajax({
-	      url: "/swearJar",
-	      method: "GET",
-	      success: function success(res) {
-	        var message = res.message;
-	        $(".hurt-feelings").text(message);
-	      }
-	    });
+	  hurtFeelings: function hurtFeelings(compliment) {
+	    var encodedForTransit = encodeURIComponent(compliment);
+	    window.location = "swearJar.html?compliment=" + encodedForTransit;
 	  },
 	
 	  showACompliment: function showACompliment() {
@@ -19833,6 +19830,54 @@
 	
 	}(jQuery);
 
+
+/***/ },
+/* 29 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	//  require('bootstrap');
+	
+	var _underscore = __webpack_require__(6);
+	
+	var _underscore2 = _interopRequireDefault(_underscore);
+	
+	//  import Backbone from "html!backbone";
+	//  import Backbone from "backbone";
+	//  import sentiment from "sentiment";
+	
+	var $ = __webpack_require__(8);
+	
+	// legacy loading for bootstrap
+	window.jQuery = window.$ = $;var app = {
+	  init: function init() {
+	    app.showNonComplimentToUser();
+	  },
+	
+	  getQueryParams: function getQueryParams(qs) {
+	
+	    qs = qs.search.split("+").join(" ");
+	
+	    var params = {},
+	        tokens,
+	        re = /[?&]?([^=]+)=([^&]*)/g;
+	
+	    while (tokens = re.exec(qs)) {
+	      params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
+	    }
+	    return params;
+	  },
+	
+	  showNonComplimentToUser: function showNonComplimentToUser() {
+	    var nonCompliment = app.getQueryParams(document.location);
+	    $(".zomg").text(nonCompliment.compliment);
+	  }
+	};
+	
+	module.exports = app;
 
 /***/ }
 /******/ ]);

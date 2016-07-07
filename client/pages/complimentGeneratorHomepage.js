@@ -22,8 +22,12 @@ var app = {
     $("#add-compliment").on("click", function(event){
       event.preventDefault();
       var compliment = $("input[name='compliment']").val();
+      var sentiment = require("sentiment");
+      var r1 = sentiment(compliment);
       if (compliment.length <= 0) {
         $("#validation").html("Invalid Entry");
+      } else if ( r1.score < 0 ) {
+        app.hurtFeelings(compliment);
       } else {
         $.ajax({
           url: "/compliment",
@@ -39,25 +43,13 @@ var app = {
         $("#ego-boost-button").on("click", function(){
           $("#validation").hide();
         });
-        // var sentiment = require("sentiment");
-        // var r1 = sentiment(compliment);
-        // if (r1.score < 0 ) {
-        //   app.hurtFeelings();
-        // }
       }
     });
   },
 
-  hurtFeelings: function(){
-    var compliment = $("input[name='compliment']").val();
-    $.ajax({
-      url: "/swearJar",
-      method: "GET",
-      success: function(res){
-        var message = res.message
-        $(".hurt-feelings").text(message);
-      }
-    });
+  hurtFeelings: function(compliment){
+    var encodedForTransit = encodeURIComponent(compliment);
+    window.location = "swearJar.html?compliment=" + encodedForTransit;
   },
 
   showACompliment: function(){
