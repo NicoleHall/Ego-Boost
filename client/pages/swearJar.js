@@ -4,7 +4,7 @@ var $ = require("jquery");
 window.jQuery = window.$ = $;
 //  require('bootstrap');
 
-import _ from "underscore";
+//import _ from "underscore";
 //  import Backbone from "html!backbone";
 //  import Backbone from "backbone";
 //  import sentiment from "sentiment";
