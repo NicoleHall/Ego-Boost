@@ -19,10 +19,8 @@
   <body>
 
     <section>
-      <div class="container-fluid">
-        <div class="row">
-
-
+      <div class="container-fluid cg">
+        <div class="row content_wrapper">
 
           <div class='center'>
             <h2 class="animated animated fadeInLeft matches-landing-page">Click Here To Receive A Compliment</h2>
@@ -33,21 +31,23 @@
 
           <h2 class="gimme_a_compliment righteous-font centered-text container"></h2>
           <div style="display: none" class="index"></div>
-<!-- delete button -->
 
-          <button class="pull-right delete">Delete</button>
-          <h3 class="delete-message"></h3>
-
-<!-- end delete button -->
           <!-- User Inputs A compliment -->
 
-          <form action="" class="input" method="post">
+          <div class="col-xs-6">
+            <form action="" class="input" method="post">
 
+              <input type="text" name="compliment" value="" placeholder="enter a compliment">
+              <button id="add-compliment" type="submit" name="submit">Save</button>
+            </form>
+          </div>
+          <div class="col-xs-6">
+            <!-- delete button -->
+                      <button class="pull-right delete">Delete</button>
+                      <h3 class="delete-message"></h3>
+            <!-- end delete button -->
+          </div>
 
-
-            <input type="text" name="compliment" value="" placeholder="enter a compliment">
-            <button id="add-compliment" type="submit" name="submit">Save</button>
-          </form>
 
           <h3 id="validation"></h3>
           <!-- End user input form -->
@@ -55,9 +55,6 @@
       </div>
 
     </section>
-
-    <div class="border-fixed">
-    </div>
 
   </body>
 </html>
