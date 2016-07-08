@@ -30,6 +30,9 @@
   text-align: center;
 }
 
+h3.delete-message {
+  text-align: right;
+}
 
 // code pen stuff : https://codepen.io/thisisstar/pen/yYpJOd
 
@@ -167,6 +170,20 @@ button#ego-boost-button.button:hover {
   top: 2px;
   text-decoration: none;
 }
+
+form.button.save-button {
+color: #F27050;
+font-family: "Raleway";
+background: rgba(239, 255, 0, 0.45);
+padding: 1% 1%;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 1px;
+font-size: 25px;
+border: none;
+margin-right: 40px;
+}
+
 
 
 button.pull-right.delete {

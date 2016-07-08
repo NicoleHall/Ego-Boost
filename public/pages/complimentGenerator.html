@@ -1,62 +1,76 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
 
-    <link rel="stylesheet" type="text/css" href="/main.css">
+  <link rel="stylesheet" type="text/css" href="/main.css">
 
-    <script type="text/javascript" src="/application.js"></script>
-    <link rel="stylesheet" href="https://s.mlcdn.co/animate.css">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script type="text/javascript" src="/application.js"></script>
+  <link rel="stylesheet" href="https://s.mlcdn.co/animate.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-    <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
-
-
-  </head>
-  <body>
-
-    <section>
-      <div class="container-fluid cg">
-        <div class="row content_wrapper">
-
-          <div class='center'>
-            <h2 class="animated animated fadeInLeft matches-landing-page">Click Here To Receive A Compliment</h2>
-            <button type="button" id="ego-boost-button" class=" animated fadeInRight button">Ego Boost</button>
-          </div>
-          <h2 class="container mission-statement righteous-font">Everyone needs to be reminded that<br>the world is a friendly place</h2>
+  <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
 
 
-          <h2 class="gimme_a_compliment righteous-font centered-text container"></h2>
-          <div style="display: none" class="index"></div>
+</head>
+<body>
 
-          <!-- User Inputs A compliment -->
+  <section>
+    <div class="container-fluid cg">
+      <div class="row content_wrapper" style="
+      margin-top: 15px;
+      margin-bottom: 15px;
+      ">
 
-          <div class="col-xs-6">
-            <form action="" class="input" method="post">
-
-              <input type="text" name="compliment" value="" placeholder="enter a compliment">
-              <button id="add-compliment" type="submit" name="submit">Save</button>
-            </form>
-          </div>
-          <div class="col-xs-6">
-            <!-- delete button -->
-                      <button class="pull-right delete">Delete</button>
-                      <h3 class="delete-message"></h3>
-            <!-- end delete button -->
-          </div>
+      <div class='center'>
+        <h2 class="animated animated fadeInLeft matches-landing-page">Click Here To Receive A Compliment</h2>
+        <button type="button" id="ego-boost-button" class=" animated fadeInRight button">Ego Boost</button>
+      </div>
+      <h2 class="container mission-statement righteous-font">Everyone needs to be reminded that<br>the world is a friendly place</h2>
 
 
-          <h3 id="validation"></h3>
-          <!-- End user input form -->
-        </div>
+      <h2 class="gimme_a_compliment righteous-font centered-text container"></h2>
+      <div style="display: none" class="index"></div>
+
+      <!-- User Inputs A compliment -->
+
+      <div class="col-xs-6">
+        <form action="" class="input" method="post">
+
+          <input type="text" name="compliment" value="" placeholder="Enter A Compliment">
+          <button id="add-compliment" class="save-button" type="submit" name="submit" style="
+          color: #F27050;
+          font-family: &quot;Raleway&quot;;
+          background: rgba(239, 255, 0, 0.45);
+          padding: 1% 1%;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          font-size: 25px;
+          border: none;
+          margin-left: 4px;
+          ">Save</button>
+        </form>
+      </div>
+      <div class="col-xs-6">
+        <!-- delete button -->
+        <button class="pull-right delete">Delete</button>
+        <h3 class="delete-message"></h3>
+        <!-- end delete button -->
       </div>
 
-    </section>
 
-  </body>
+      <h3 id="validation"></h3>
+      <!-- End user input form -->
+    </div>
+  </div>
+
+</section>
+
+</body>
 </html>
 
 
