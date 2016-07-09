@@ -13978,7 +13978,7 @@
 	  },
 	
 	  backButton: function backButton() {
-	    $("button.angry-button").on("click", function () {
+	    $("p.text.free-him").on("click", function () {
 	      window.location = "complimentGenerator.html";
 	    });
 	  }
