@@ -1,6 +1,25 @@
 @import url(https://fonts.googleapis.com/css?family=Rock+Salt);
 @import url(https://fonts.googleapis.com/css?family=Righteous);
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,700);
+@import url(https://fonts.googleapis.com/css?family=Permanent+Marker);
+
+div#monster-world{
+  height: 100%
+}
+.row.content_wrapper {
+    border: 5px solid orange;
+    height: 100vh;
+}
+
+.container-fluid.cg{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.container-fluid.sj{
+  padding-left: 30px;
+  padding-right: 30px;
+}
 
 .mission-statement{
   text-align: center;
@@ -9,6 +28,10 @@
 .rock-salt-font {
   font-family: 'Rock Salt', cursive;
   line-height: 150%
+}
+
+.permanent-marker-font {
+font-family: 'Permanent Marker', cursive;
 }
 
 .centered-text {
@@ -20,6 +43,9 @@
   text-align: center;
 }
 
+h3.delete-message {
+  text-align: right;
+}
 
 // code pen stuff : https://codepen.io/thisisstar/pen/yYpJOd
 
@@ -145,6 +171,7 @@ button.angry-button {
   letter-spacing: 1px;
   font-size: 25px;
   border: none;
+  margin-bottom: 75px;
 
 }
 
@@ -158,11 +185,26 @@ button#ego-boost-button.button:hover {
   text-decoration: none;
 }
 
+form.button.save-button {
+color: #F27050;
+font-family: "Raleway";
+background: rgba(239, 255, 0, 0.45);
+padding: 1% 1%;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 1px;
+font-size: 25px;
+border: none;
+margin-right: 40px;
+}
+
+
+
 button.pull-right.delete {
   border-radius: 0;
   background: rgba(239, 255, 0, 0.45);
   padding: 1% 1%;
-  margin: 10px 0;
+  margin: 0 0 10px;
   color: #F27050;
   font-family: "Raleway";
   font-weight: 700;
