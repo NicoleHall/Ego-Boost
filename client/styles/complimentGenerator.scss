@@ -1,13 +1,18 @@
 @import url(https://fonts.googleapis.com/css?family=Rock+Salt);
 @import url(https://fonts.googleapis.com/css?family=Righteous);
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,700);
-
+@import url(https://fonts.googleapis.com/css?family=Permanent+Marker);
 .row.content_wrapper {
     border: 5px solid orange;
     height: 100vh;
 }
 
 .container-fluid.cg{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.container-fluid.sj{
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -19,6 +24,10 @@
 .rock-salt-font {
   font-family: 'Rock Salt', cursive;
   line-height: 150%
+}
+
+.permanent-marker-font {
+font-family: 'Permanent Marker', cursive;
 }
 
 .centered-text {
@@ -158,6 +167,7 @@ button.angry-button {
   letter-spacing: 1px;
   font-size: 25px;
   border: none;
+  margin-bottom: 75px;
 
 }
 
