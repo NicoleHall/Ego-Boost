@@ -50,7 +50,8 @@ var app = {
   },
 
   backButton: function(){
-    $("p.text.free-him").on("click", function(){
+
+    $("#angrybutton").on("click", function(){
       window.location = "complimentGenerator.html";
     });
   }

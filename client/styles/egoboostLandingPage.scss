@@ -1,0 +1,128 @@
+img {
+  width: 100%;
+}
+
+section {
+  background: #f887a6;
+  font-family: "Raleway";
+  font-size: 16px;
+  line-height: 22px;
+  min-height: 100vh;
+}
+
+
+.border-fixed {
+  position: fixed;
+  top: 20px;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  border: 5px solid #F9D47B;
+  z-index: 90;
+  mix-blend-mode: multiply;
+  pointer-events:none;
+}
+
+.pink-border-fixed {
+  position: fixed;
+  top: 20px;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  border: 5px solid #EE1289;
+
+  z-index: 90;
+  mix-blend-mode: multiply;
+  pointer-events:none;
+}
+
+.content {
+  z-index: 100;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+h1.animated.fadeInRight {
+
+  padding-top: 10px;
+  font-size: 120px;
+  color: #F9D47B;
+  mix-blend-mode: multiply;
+  font-weight: 700;
+  font-family: "Righteous";
+  margin-top: 60px;
+  margin-bottom: 40px;
+
+}
+
+.supposed-to-be-friendly{
+  margin-top: 45px;
+}
+
+.righteous-font {
+  font-family: "Righteous";
+}
+
+h2 {
+  font-size: 25px;
+  color: pink;
+  line-height: 35px;
+}
+
+p {
+  padding: 20px 0;
+  color: pink;
+}
+
+a.button {
+  border-radius: 0;
+  background: rgba(239, 255, 0, 0.45);
+  padding: 5% 10%;
+  margin: 10px 0;
+  color: #F27050;
+  font-family: "Raleway";
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+  display: block;
+  text-align: center;
+  text-underline: none;
+  position: relative;
+}
+
+button.button {
+  border-radius: 0;
+  background: rgba(239, 255, 0, 0.45);
+  padding: 3% 6%;
+  margin: 10px 0;
+  color: #F27050;
+  font-family: "Raleway";
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 25px;
+  border: none;
+
+}
+
+div.col-md-6.col-md-6.col-xs-12.balloon {
+  margin: 0!important;
+    padding: 0!important;
+    background: url(http://www.thisisstar.com/images/100UI/balloon_girl.jpg) no-repeat top left;
+    background-attachment: fixed;
+    background-size: contain;
+    min-height: 100vh;
+    position: relative;
+}
+
+.balloon {
+  margin: 0!important;
+  padding: 0!important;
+  background: url(http://www.thisisstar.com/images/100UI/balloon_girl.jpg) no-repeat top left;
+  background-attachment: fixed;
+  background-size: contain;
+  min-height: 100vh;
+  position: relative;
+}

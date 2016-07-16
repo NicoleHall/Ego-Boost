@@ -1,8 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Rock+Salt);@import url(https://fonts.googleapis.com/css?family=Righteous);@import url(https://fonts.googleapis.com/css?family=Raleway:300,700);@import url(https://fonts.googleapis.com/css?family=Permanent+Marker);div#monster-world {
-  height: 100%;
-}
-
-.row.content_wrapper {
+@import url(https://fonts.googleapis.com/css?family=Rock+Salt);@import url(https://fonts.googleapis.com/css?family=Righteous);@import url(https://fonts.googleapis.com/css?family=Raleway:300,700);.row.content_wrapper {
   border: 5px solid orange;
   height: 100vh;
 }
@@ -40,6 +36,95 @@
 
 h3.delete-message {
   text-align: right;
+}
+
+a.button:hover {
+  top: 2px;
+  text-decoration: none;
+}
+
+button#ego-boost-button.button:hover {
+  top: 2px;
+  text-decoration: none;
+}
+
+form.button.save-button {
+  color: #F27050;
+  font-family: "Raleway";
+  background: rgba(239, 255, 0, 0.45);
+  padding: 1% 1%;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 25px;
+  border: none;
+  margin-right: 40px;
+}
+
+button.pull-right.delete {
+  border-radius: 0;
+  background: rgba(239, 255, 0, 0.45);
+  padding: 1% 1%;
+  margin: 0 0 10px;
+  color: #F27050;
+  font-family: "Raleway";
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 25px;
+  border: none;
+  margin-right: 40px;
+}
+
+.max-width {
+  width: 90%;
+  margin: 0 auto;
+}
+
+h2.matches-landing-page {
+  color: antiquewhite;
+  font-size: 45px;
+  margin-bottom: 30px;
+  margin-top: 70px;
+  font-family: inherit;
+}
+
+h2.animated.slideInUp {
+  color: antiquewhite;
+}
+
+@media (max-width: 767px) {
+  .balloon {
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+  }
+  h1 {
+    margin: -35vw 0 0 20px;
+    font-size: 28vw;
+  }
+  .max-width {
+    margin: 50px auto;
+  }
+}
+
+button.angry-button {
+  width: 95px;
+  border-radius: 0;
+  background: rgba(239, 255, 0, 0.45);
+  padding: 3% 6%;
+  color: #F27050;
+  font-family: "Raleway";
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 25px;
+  border: none;
+  position: absolute;
+  z-index: 2;
+  top: 246px;
+  left: 42px;
 }
 
 img {
@@ -146,60 +231,6 @@ button.button {
   border: none;
 }
 
-button.angry-button {
-  width: 95px;
-  border-radius: 0;
-  background: rgba(239, 255, 0, 0.45);
-  padding: 3% 6%;
-  margin: 10px 0;
-  color: #F27050;
-  font-family: "Raleway";
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 25px;
-  border: none;
-  margin-bottom: 75px;
-}
-
-a.button:hover {
-  top: 2px;
-  text-decoration: none;
-}
-
-button#ego-boost-button.button:hover {
-  top: 2px;
-  text-decoration: none;
-}
-
-form.button.save-button {
-  color: #F27050;
-  font-family: "Raleway";
-  background: rgba(239, 255, 0, 0.45);
-  padding: 1% 1%;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 25px;
-  border: none;
-  margin-right: 40px;
-}
-
-button.pull-right.delete {
-  border-radius: 0;
-  background: rgba(239, 255, 0, 0.45);
-  padding: 1% 1%;
-  margin: 0 0 10px;
-  color: #F27050;
-  font-family: "Raleway";
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 25px;
-  border: none;
-  margin-right: 40px;
-}
-
 div.col-md-6.col-md-6.col-xs-12.balloon {
   margin: 0 !important;
   padding: 0 !important;
@@ -220,26 +251,8 @@ div.col-md-6.col-md-6.col-xs-12.balloon {
   position: relative;
 }
 
-.row-of-ballon-girls {
-  border-bottom: 0;
-  background-repeat: repeat-y;
-}
-
-.max-width {
-  width: 90%;
-  margin: 0 auto;
-}
-
-h2.matches-landing-page {
-  color: antiquewhite;
-  font-size: 45px;
-  margin-bottom: 30px;
-  margin-top: 70px;
-  font-family: inherit;
-}
-
-h2.animated.slideInUp {
-  color: antiquewhite;
+div#monster-world {
+  height: 100%;
 }
 
 .example {
@@ -571,6 +584,16 @@ div#stage {
   color: #DA4444;
 }
 
+#monster-world.omg-clicked p.text.free-him {
+  position: absolute;
+  z-index: 1;
+}
+
+#monster-world.omg-clicked button.angry-button {
+  position: absolute;
+  z-index: 2;
+}
+
 #monster-world.omg-clicked #stage:hover .click-him {
   opacity: 0;
 }
@@ -599,6 +622,7 @@ p {
   display: block;
   padding-bottom: 4em;
   position: absolute;
+  z-index: 1;
   top: 20em;
   width: 275px;
   left: -47px;
@@ -678,22 +702,6 @@ p.free-him {
   50% {
     -webkit-transform: translateY(-25px);
     transform: translateY(-25px);
-  }
-}
-
-@media (max-width: 767px) {
-  .balloon {
-    background-size: cover;
-    background-position: center center;
-    width: 100%;
-    height: 100%;
-  }
-  h1 {
-    margin: -35vw 0 0 20px;
-    font-size: 28vw;
-  }
-  .max-width {
-    margin: 50px auto;
   }
 }
 
