@@ -1,10 +1,10 @@
 {
-  "name": "davincijs-starter",
+  "name": "ego-boost",
   "version": "0.0.1",
   "license": "MIT",
-  "author": "bishopz <eduatx@gmail.com>",
-  "description": "boilerplate for web animators",
-  "repository": "https://github.com/bishopZ/kabuki-motion",
+  "author": "Nicole Hall <nicolealexandrahall@gmail.com>",
+  "description": "We're here to remind you that the world is a friendly place",
+  "repository": "https://github.com/NicoleHall/Ego-Boost",
   "keywords": [
     "heroku",
     "node",
