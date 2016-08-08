@@ -20,10 +20,7 @@
 
   <section>
     <div class="container-fluid cg">
-      <div class="row content_wrapper" style="
-      margin-top: 15px;
-      margin-bottom: 15px;
-      ">
+      <div class="row">
 
       <div class='center'>
         <h2 class="animated animated fadeInLeft matches-landing-page">Click Here To Receive A Compliment</h2>
@@ -37,36 +34,34 @@
 
       <!-- User Inputs A compliment -->
 
-      <div class="container col-xs-6">
-        <form action="" class="input" method="post">
 
-          <input type="text" name="compliment" value="" placeholder="Enter A Compliment">
-          <button id="add-compliment" class="save-button" type="submit" name="submit" style="
-          color: #F27050;
-          font-family: &quot;Raleway&quot;;
-          background: rgba(239, 255, 0, 0.45);
-          padding: 1% 1%;
-          font-weight: 700;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          font-size: 25px;
-          border: none;
-          margin-left: 4px;
-          ">Save</button>
-        </form>
-      </div>
-      <div class="container col-xs-6">
-        <!-- delete button -->
-        <button class="pull-right delete">Delete</button>
-      </div>
+
+      <button class="delete">Delete</button>
+      <form action="" class="input" method="post">
+
+        <input type="text" name="compliment" value="" placeholder="Enter A Compliment">
+        <button id="add-compliment" class="save-button" type="submit" name="submit" >Save</button>
+      </form>
+
+
+      <!-- delete button -->
+
+
+
+
       <h3 class="delete-message"></h3>
-        <!-- end delete button -->
+      <!-- end delete button -->
       <h3 id="validation"></h3>
       <!-- End user input form -->
+
+
+
     </div>
   </div>
 
 </section>
+<div class="border-fixed">
+</div>
 
 </body>
 </html>
