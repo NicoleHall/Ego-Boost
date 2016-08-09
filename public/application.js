@@ -194,6 +194,9 @@
 	    $("#ego-boost-button").on("click", function () {
 	      $(".delete-message").hide();
 	    });
+	    $("button#add-compliment").on("click", function () {
+	      $(".delete-message").text("");
+	    });
 	  }
 	
 	};
