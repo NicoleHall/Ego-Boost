@@ -29,6 +29,7 @@
     "watch": "webpack --watch --progress --config server/webpack.config.js"
   },
   "dependencies": {
+    "animate.css": "^3.5.1",
     "animate.css-js": "0.0.9",
     "babel-core": "^5.5.4",
     "babel-eslint": "^4.1.7",
